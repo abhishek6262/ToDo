@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="col-sm-6 mt-4 ml-auto mr-auto" *ngIf="showInvalidCredentialsError">
+    <div class="alert alert-danger font-weight-bold text-center" role="alert">
+      Sorry! Invalid Credentials. Please try again.
+    </div>
+  </div>
+
+  <form class="form-login text-center mt-5" (submit)="authenticateUser()">
+    <h1 class="mb-4 h3 font-weight-bold">TODO App</h1>
+
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input id="inputEmail" name="email" class="form-control form-control-lg" placeholder="Email address" required="" autofocus=""
+      type="email" [(ngModel)]="email">
+
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input id="inputPassword" name="password" class="form-control form-control-lg" placeholder="Password" required="" type="password"
+      [(ngModel)]="password">
+
+    <button class="btn btn-lg btn-primary btn-block mt-4" type="submit" [disabled]="isProcessing">{{ loginButtonText }}</button>
+    <p class="mt-5 mb-3 text-muted">© 2018</p>
+  </form>
+</div>

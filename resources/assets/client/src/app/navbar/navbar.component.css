@@ -1,0 +1,7 @@
+.nav-item.dropdown .dropdown-menu {
+  top: 92%;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}

@@ -1,0 +1,26 @@
+<div class="card has-box-shadow text-left">
+    <div class="card-body">
+        <p class="card-text">{{ item.data }}</p>
+    </div>
+
+    <div class="card-footer bg-white">
+        <form>
+            <div class="form-row">
+                <div class="col-sm mb-2">
+                    <select name="status" class="custom-select" [(ngModel)]="status">
+                        <option value="todo">Todo</option>
+                        <option value="onprogress">On Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+
+                <div class="col-sm text-right">
+                    <button class="btn btn-primary mr-1" (click)="changeStatus()">Set status</button>
+                    <button class="btn btn-light" (click)="deleteItem()">
+                        <i class="fa fa-trash" style="color: #333;"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

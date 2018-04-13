@@ -1,0 +1,9 @@
+<div>
+  <h5 class="font-weight-bold">TODO Items</h5>
+
+  <ul class="list-items">
+    <li class="mt-4" *ngFor="let item of getItems()">
+      <app-card [item]="item"></app-card>
+    </li>
+  </ul>
+</div>

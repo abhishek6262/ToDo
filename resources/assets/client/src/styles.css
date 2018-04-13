@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+.has-box-shadow {
+    box-shadow: 0px 2px 2px 0 #E5E5E5;
+}
+
+.list-items {
+    padding: 0;
+}
+
+.list-items li {
+    list-style-type: none;
+}
+
+app-postarea {
+    width: 100%;
+}

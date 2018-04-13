@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="col-sm-6 mt-4 ml-auto mr-auto" *ngIf="registrationErrorText.length > 0">
+    <div class="alert alert-danger font-weight-bold text-center" role="alert">
+      {{ registrationErrorText }}
+    </div>
+  </div>
+
+  <form class="form-register text-center mt-5" (submit)="registerUser()">
+    <h1 class="mb-4 h4 font-weight-bold">Fill the form to register</h1>
+
+    <label for="inputName" class="sr-only">Full name</label>
+    <input id="inputName" name="name" class="form-control form-control-lg" placeholder="Full name" required="" autofocus="" type="text"
+      [(ngModel)]="fullName">
+
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input id="inputEmail" name="email" class="form-control form-control-lg" placeholder="Email address" required="" autofocus=""
+      type="email" [(ngModel)]="email">
+
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input id="inputPassword" name="password" class="form-control form-control-lg" placeholder="Password" required="" type="password"
+      [(ngModel)]="password">
+
+    <button class="btn btn-lg btn-primary btn-block mt-4" type="submit" [disabled]="isProcessing">{{ registerButtonText }}</button>
+    <p class="mt-5 mb-3 text-muted">© 2018</p>
+  </form>
+</div>

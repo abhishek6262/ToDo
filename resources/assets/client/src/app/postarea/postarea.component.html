@@ -1,0 +1,26 @@
+<div class="col-sm-12">
+  <div id="postarea" class="has-box-shadow mt-3">
+    <form (submit)="addItem($event)">
+      <div class="form-row">
+        <div class="col-12 mb-3">
+          <textarea name="item-text" class="form-control" placeholder="Type the task item..." required
+                    [(ngModel)]="data"></textarea>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col-sm mb-2">
+          <select name="status" class="custom-select" [(ngModel)]="status" required>
+            <option value="todo">Todo</option>
+            <option value="onprogress">On Progress</option>
+            <option value="completed">Completed</option>
+          </select>
+        </div>
+
+        <div class="col-sm text-right">
+          <button class="btn btn-primary" type="submit">Post</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
